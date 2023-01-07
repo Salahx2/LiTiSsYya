@@ -1,0 +1,44 @@
+{% extends "base.html"%}
+{% load static%}
+{%block title%}LiTiSsYya-From Tl 2 Ti{%endblock title%}
+{%include "download.html"%}
+{%block Header%}
+<div id="loader">
+  <div class="orbit one"></div>
+  <div class="orbit two"></div>
+  <div class="orbit three"></div>
+</div>
+<div id="Content">
+    <div class="container-fluid">
+        <div class="row">
+                <form method="POST" action="" onsubmit="isValidHttpUrl()">
+		     {% csrf_token %}
+                <div class="Poste">
+                <img class ="rounded mx-auto d-block"src="{% static 'img/LiTiSsYya.gif'%}" alt="Logo">
+                <div class="form-floating mb-3">
+                    <input type="url" class="form-control" id="floatingInput" name = "URL" placeholder =""  required="required">
+                    <label for="floatingInput">YouTube Video Link:</label>
+                    <!--<input type="checkbox" name="extention" value="mp4" class="form-check-input">
+                    <!--<label for="mp4" class="form-check-label">mp4</label>!-->
+                    <input type="checkbox" name="extention" value="mp3" class="form-check-input">
+                    <label for="mp3" class="form-check-label">mp3</label>
+                    <button class="btn btn-primary" type="submit" name="download"><i class="fa fa-cloud-download-alt"></i>&nbspDownload</button>
+                  </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="cockies" id="PUPPET">
+             <img src="{% static 'img/Puppet.png'%}" class="Puppet" alt="...">
+             <p class="dog_msg"><span id="Puppet_Talk">What Do You Mean Leave?PLease You Just Visit My Site!</span></p>
+             <button class="btn btn-primary" id="close_bottom_bar" onclick="ShutUp()">Shut Up</button>
+        </div>
+    </div>
+{%endblock Header%}
+{%block footer%}
+{% include 'footer.html'%}
+  {%endblock footer%}
+  {%block custom_js%}
+    <script scr="{% static 'js/main.js'%}"></script>   
+  {%endblock custom_js%}
+

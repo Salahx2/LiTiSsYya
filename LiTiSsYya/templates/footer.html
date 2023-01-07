@@ -1,0 +1,36 @@
+﻿{% load static %}
+<!--Footer-->
+<div class="mt-5 pt-5 pb-5 footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-xs-12 about-company">
+          <h2 class="h2" id="brand_name"><i class="fa fa-heart"></i>LiTiSsYya</h2>
+          <p class="pr-5 text-white-50">Dear Aphrodite
+<br>
+If you see the message, please know that I dusted off my face and stopped working as a craftsman, and here I am now making a website instead of jewelry to remind me of that, and no matter how far the distance is between us, the button download unites us
+</p>
+<hr>
+<div class="col-sm-4" id="Social_Media_Contact">
+          <p><a href="#"><i class="fab fa-facebook"></i></a><a href="https://twitter.com/LiTiSsYya" target="_blank"><i class="fab fa-twitter"></i></a></p><a href="https://www.instagram.com/salahx2eddine/" target="_blank"><i class="fab fa-instagram"></i></a></p>
+        </div>
+</div>
+        <div class="col-lg-3 col-xs-12 links">
+            <ul class="m-0 p-0">
+              <li><a href="{% url 'About' %}">About Me</a></li>
+              <li><a href="{% url 'Privacy'%}">Privacy Policy</a></li>
+              <li><a href="{% url 'Terms' %}">Terms</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-4 col-xs-12 location">
+          <img src="{% static 'img/qrchimpX256.png'%}" alt="QR_CODE" class="rounded float-left" id="qr">
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col copyright">
+          <center>
+          <p class=""><small class="text-white-50">© {{year}}. All Rights Reserved.</small></p>
+          </center>
+        </div>
+      </div>
+    </div>
+</div>
